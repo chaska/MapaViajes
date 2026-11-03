@@ -6,6 +6,10 @@
 - Obliga: quien reciba o distribuya el componente, o una versión modificada, debe darlo con esta misma licencia y con su código fuente. Nadie puede hacerlo privado.
 - No puede prohibir: que alguien lo venda o cobre por soporte. Ninguna licencia libre (GPL, AGPL, MIT…) puede prohibir el uso comercial; una cláusula así dejaría de ser software libre y sería incompatible con la GPL de Joomla.
 
+## Traducciones
+- **Español (es-ES)** e **inglés (en-GB)**: ChasKa, con asistencia de IA (Claude, de Anthropic).
+- Cuando entre un idioma nuevo (guía en `docs/TRADUCIR.md`), aquí figurará quién lo tradujo, si esa persona quiere aparecer.
+
 ## Terceros incluidos
 - **Tipografías** Bricolage Grotesque, Figtree, Cinzel y Caveat: SIL Open Font License 1.1, sin modificar, de los paquetes npm `@fontsource/*` (`media/fonts/LICENSES.md`).
 - **Geometría de países** (`media/data/world.json`): datos de Natural Earth (dominio público), a través de `world-atlas` y `topojson-client`, proyectados con `d3-geo` (Natural Earth 1). Las islas Canarias, Baleares, Madeira y Azores se añadieron desde Natural Earth 1:10m (también dominio público) con `tools/add-islands.mjs`. El archivo es una salida generada; no contiene código de esas librerías.

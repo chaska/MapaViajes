@@ -67,6 +67,10 @@ $pFiles = [];
 foreach ($plugins as $g) { $pFiles[$g] = inspect($root . '/src/plugins/' . $g . '/mapaviajes', $fail); }
 $kFiles = inspect($root . '/src/package', $fail);
 
+// Idiomas: todos completos, sin marcadores rotos ni nada peligroso, y listados en los manifiestos (php build/idiomas.php todos).
+require_once __DIR__ . '/idiomas.php';
+foreach (Idiomas::todo($root) as $problem) { $fail[] = 'idioma: ' . $problem; }
+
 if ($fail) { fwrite(STDERR, "BUILD REFUSED:\n - " . implode("\n - ", $fail) . "\n"); exit(1); }
 
 // 4. Three zips with a stable order and no stray files: the component, the plugin and the package that holds both.

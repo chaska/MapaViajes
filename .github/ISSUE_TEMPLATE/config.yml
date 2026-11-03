@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Fallo de seguridad (privado)
+    url: https://github.com/chaska/MapaViajes/security/advisories/new
+    about: No lo publiques en un Issue: usa el aviso privado de GitHub.

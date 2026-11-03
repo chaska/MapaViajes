@@ -1,5 +1,11 @@
 # Registro de cambios
 
+## Sin versión nueva — colaborar con idiomas (herramientas del repositorio; el paquete no cambia)
+- `docs/TRADUCIR.md`: guía en lenguaje sencillo para añadir un idioma. `CONTRIBUTING.md` con el aviso de seguridad en privado (sin correo, por «Security › Report a vulnerability» de GitHub).
+- `build/idiomas.php` con tres órdenes: `comprobar xx-XX` (archivos y claves iguales que en-GB, marcadores `%s`/`%d` intactos, sin HTML, `javascript:`, manejadores `on…=`, entidades ni direcciones externas), `plantilla xx-XX` (crea el idioma en las 6 carpetas y en los manifiestos) y `manifiestos`. El empaquetador ejecuta la misma comprobación y se niega a construir con un idioma malo o sin listar.
+- Plantillas de GitHub: formulario «Ofrecer una traducción» y lista de comprobación para las peticiones de cambio.
+- Prueba nueva `tests/06-idiomas-colaboracion.php` (30): plantilla, traducción honesta, 13 maneras de colar algo malo, marcadores, archivos sobrantes, idioma incompleto y candado del empaquetador.
+
 ## 1.18.1 — 2026-10-27 (auditoría completa de seguridad)
 Auditoría con seis revisiones independientes (fotos y amigos, ranking y plugin, JavaScript, instalación y privacidad, revisión de código y revisión del diff). Informe: `docs/AUDITORIA-SEGURIDAD-1.18.md`.
 - **Permiso propio «Moderar en el mapa»** (`mapaviajes.moderate`). Antes, ver todas las fotos «solo amigos» o pendientes, borrar viajes ajenos y abrir/cerrar comentarios ajenos dependía de «Editar estado» / «Eliminar», que Joomla hereda de serie a los grupos **Publisher y Manager**: cualquiera de esos grupos veía las fotos privadas de todo el mundo. Ahora solo moderan los Superusuarios y quien tenga el permiso nuevo. Al instalar se da al grupo Administrator; al **actualizar** se conserva lo que ya tuvieras marcado en «Editar estado» y se añade Administrator, pero se pierde lo heredado de Publisher y Manager. Revísalo en Opciones → Permisos. El panel de administración sigue usando los permisos normales de Joomla.

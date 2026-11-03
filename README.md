@@ -20,7 +20,7 @@
 
 > Creado y dirigido por **ChasKa**, desarrollado con asistencia de IA (Claude, de Anthropic).
 
-**Ir a:** [Qué hace](#qué-hace) · [Todas las opciones](#todas-las-opciones) · [Instalar](#instalar) · [Seguridad](#seguridad) · [Autor y licencia](#autor-y-licencia)
+**Ir a:** [Qué hace](#qué-hace) · [Todas las opciones](#todas-las-opciones) · [Instalar](#instalar) · [Seguridad](#seguridad) · [Colaborar: traducciones](#colaborar-traducciones) · [Autor y licencia](#autor-y-licencia)
 
 ---
 
@@ -262,6 +262,14 @@ En *Componentes › Mapa de viajes › Opciones*, una pestaña por apartado.
 - **Auditorías y pruebas:** [`SECURITY.md`](SECURITY.md), [`docs/AUDITORIA-SEGURIDAD-1.18.md`](docs/AUDITORIA-SEGURIDAD-1.18.md), [`docs/PRIVACIDAD.md`](docs/PRIVACIDAD.md) y [`tests/LEEME.md`](tests/LEEME.md). Lo que no se ha probado está dicho ahí.
 
 </details>
+
+## Colaborar: traducciones
+
+Hoy el mapa está en **español** e **inglés**. Si quieres añadir tu idioma, no hace falta programar: copias la plantilla, traduces los textos y los envías por GitHub. Una herramienta del repositorio comprueba la traducción antes de aceptarla (que no falte ninguna clave, que se conserven los marcadores `%s` y `%d`, y que no lleve HTML, scripts ni direcciones externas). Solo se aceptan idiomas completos, se revisan a mano y salen en la siguiente versión con tu crédito.
+
+- **Guía paso a paso:** [`docs/TRADUCIR.md`](docs/TRADUCIR.md)
+- **Ofrecer una traducción:** [formulario de GitHub](../../issues/new?template=traduccion.yml)
+- **Cómo colaborar y avisar de un fallo de seguridad en privado:** [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
 ## Autor y licencia
 

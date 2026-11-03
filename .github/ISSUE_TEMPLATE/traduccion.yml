@@ -1,0 +1,34 @@
+name: Ofrecer una traducción
+description: Quiero traducir Mapa de viajes a otro idioma
+title: "Traducción: "
+labels: ["traducción"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias. Antes de enviar, lee la guía [`docs/TRADUCIR.md`](https://github.com/chaska/MapaViajes/blob/main/docs/TRADUCIR.md). Solo se aceptan idiomas **completos**, y los textos se revisan antes de entrar.
+  - type: input
+    id: idioma
+    attributes:
+      label: Idioma y código
+      description: Por ejemplo «francés, fr-FR» o «portugués de Brasil, pt-BR».
+    validations:
+      required: true
+  - type: checkboxes
+    id: comprobacion
+    attributes:
+      label: Antes de enviar
+      options:
+        - label: He creado la plantilla con `php build/idiomas.php plantilla xx-XX` y he traducido los 10 archivos.
+          required: true
+        - label: `php build/idiomas.php comprobar xx-XX` dice que la traducción es correcta.
+          required: true
+        - label: No he tocado los nombres de las claves ni los marcadores `%s` / `%d`.
+          required: true
+        - label: No he puesto HTML, direcciones de internet ni `javascript:` en los textos.
+          required: true
+  - type: textarea
+    id: notas
+    attributes:
+      label: Cómo prefieres aparecer en los créditos (opcional)
+      description: Un nombre o un usuario de GitHub. Si lo dejas vacío, no apareces.
