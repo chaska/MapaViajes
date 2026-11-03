@@ -4,7 +4,7 @@ Principio: o es seguro o no está hecho. Cada afirmación de este documento est�
 
 ## Camino de un viaje, de la pantalla a la base de datos
 
-1. **Quién**: solo usuarios con sesión y el permiso `core.create` del componente. El visitante recibe 403 (mapa, datos, fotos y envío).
+1. **Quién**: solo usuarios con sesión y el permiso `mapaviajes.submit` del componente («Añadir viajes»; antes `core.create`). El visitante recibe 403 (mapa, datos, fotos y envío).
 2. **Cómo**: solo `POST`, con token CSRF de Joomla **en el cuerpo** (no vale en la URL), cabecera `X-Requested-With: XMLHttpRequest` (un formulario de otra web no puede ponerla) y campo trampa vacío.
 3. **Cuánto**: tres álbumes por hora y diez por día por usuario (ajustable). Los envíos rechazados por contenido peligroso quedan anotados (código del motivo, usuario y fecha; nunca el contenido ni la IP).
 4. **Álbum**: debe existir, estar publicado y ser visible para el nivel de acceso del usuario. Misma respuesta si no existe que si no puede verlo.
@@ -28,6 +28,9 @@ Principio: o es seguro o no está hecho. Cada afirmación de este documento est�
 | ACL de la API web (más de 15) | El componente no expone API REST. Desactiva los plugins *Web Services* y *API Authentication* si no los usas |
 | CORS, SSRF, path traversal en medios | No hace peticiones salientes; sirve las fotos por identificador, nunca por ruta |
 | Núcleo desactualizado | El instalador se niega por debajo de 5.4.9 / 6.1.4 y el panel avisa si el núcleo queda atrás |
+
+## Auditorías posteriores
+La de las versiones 1.12 a 1.18 está en [`docs/AUDITORIA-SEGURIDAD-1.18.md`](docs/AUDITORIA-SEGURIDAD-1.18.md) (la de 1.12 a 1.15, en `docs/AUDITORIA-SEGURIDAD-1.15.md`). Lo más importante que cambió: moderar en el mapa es el permiso propio `mapaviajes.moderate`, que Joomla no hereda a ningún grupo.
 
 ## Auditoría de seguridad (14/10/2026, versión 1.8.7)
 Tres revisores independientes leyeron el código por zonas (frontend; servicios de imagen, texto, almacenamiento y ranking; administración, plugins y JavaScript) y se contrastó con las clases de fallo de los avisos de Joomla 5 y 6 (2026: ACL de lotes en `com_users` CVE-2026-48898, MFA CVE-2026-48896, ACL de webservices CVE-2026-48950..58, y los ya citados). Sin fallos críticos ni altos. Corregido en 1.8.7: ETag que revelaba el nombre interno de la foto y el id del autor; nombres de foto con más aleatoriedad (96 bits); límites de envío y de reacciones sin carreras entre peticiones paralelas (bloqueo por usuario en transacción); `X-Frame-Options: SAMEORIGIN`; exportación RGPD de un correo sin cuenta; quien solo crea mapas ya no los publica; `core.edit` declarado; lote desactivado; filtro de Engage solo con viajes publicados.
