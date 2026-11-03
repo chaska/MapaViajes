@@ -5,14 +5,15 @@
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><img alt="Última versión" src="https://img.shields.io/github/v/release/chaska/mapa-mundial-interactivo?label=versi%C3%B3n&color=b3392a"></a>
+  <a href="../../releases/latest"><img alt="Última versión" src="https://img.shields.io/github/v/release/chaska/MapaViajes?label=versi%C3%B3n&color=b3392a"></a>
   <img alt="Joomla 5 · 6" src="https://img.shields.io/badge/Joomla-5%20%C2%B7%206-1f6f78">
   <img alt="PHP 8.1 o superior" src="https://img.shields.io/badge/PHP-8.1%2B-777bb4">
   <a href="LICENSE"><img alt="Licencia GPL-3.0" src="https://img.shields.io/badge/licencia-GPL--3.0-blue"></a>
 </p>
 
 <p align="center">
-  <a href="../../releases/latest"><b>⬇ Descargar el ZIP de la última versión</b></a>
+  <a href="https://github.com/chaska/MapaViajes/releases/download/v1.18.1/pkg_mapaviajes-1.18.1.zip"><b>⬇ Descargar ahora: pkg_mapaviajes-1.18.1.zip</b></a><br>
+  <sub>Versión 1.18.1 · SHA-256 <code>f0b828cf8e5fb48a625a963a4a1bdc8401ea127917d86db6b5c47b4005ec38de</code> · <a href="../../releases/latest">todas las versiones</a></sub>
 </p>
 
 <p align="center"><img src="docs/capturas/principal.jpg" width="860" alt="El mapa mundi con chinchetas rojas, el título del mapa arriba a la izquierda y los botones «Añadir mi viaje» y de menú arriba a la derecha"></p>
